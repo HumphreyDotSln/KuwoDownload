@@ -106,10 +106,12 @@ while True:
     if key == 107 and current_page < int(page):
         current_page += 1
         soup = HTML_parse(name,current_page)
+        os.system('cls')#清屏
         information = print_songs(soup,current_page)
     elif key == 106 and current_page > 1:
         current_page -= 1
         soup = HTML_parse(name,current_page)
+        os.system('cls')#清屏
         information = print_songs(soup,current_page)
     elif key == 113:
         sys.exit()
